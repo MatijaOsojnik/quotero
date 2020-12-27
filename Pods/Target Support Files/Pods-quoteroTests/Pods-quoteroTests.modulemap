@@ -1,0 +1,6 @@
+framework module Pods_quoteroTests {
+  umbrella header "Pods-quoteroTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
