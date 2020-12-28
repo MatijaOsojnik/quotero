@@ -11,6 +11,7 @@ target 'quotero' do
   pod 'Disk', '~> 0.6.4'
   pod 'Firebase/Analytics'
   pod 'Firebase/Firestore'
+  pod 'Firebase/Auth'
   pod 'FirebaseFirestoreSwift'
 
   target 'quoteroTests' do
