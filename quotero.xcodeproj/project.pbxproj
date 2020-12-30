@@ -3,12 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0CD0317C7C2C2B8E53788E84 /* Pods_quoteroTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43FF4CD3AE9273DA1FFAAF96 /* Pods_quoteroTests.framework */; };
-		6BE24C37ED4DDD0CFC1B2BED /* Pods_quotero_quoteroUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23B43CD63FB88646B902E9AB /* Pods_quotero_quoteroUITests.framework */; };
+		1FB5DE759741CC3DCF4126D1 /* Pods_quotero_quoteroUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FD0CD0EC03B50E3E62A797A /* Pods_quotero_quoteroUITests.framework */; };
+		46166C91D1E64926EC0127DA /* Pods_quotero.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 106B262DF677B7ADB6699ADC /* Pods_quotero.framework */; };
 		781396042587E84600D2DE7D /* quoteroApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781396032587E84600D2DE7D /* quoteroApp.swift */; };
 		781396062587E84600D2DE7D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781396052587E84600D2DE7D /* ContentView.swift */; };
 		781396082587E84700D2DE7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 781396072587E84700D2DE7D /* Assets.xcassets */; };
@@ -16,7 +16,9 @@
 		781396162587E84700D2DE7D /* quoteroTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781396152587E84700D2DE7D /* quoteroTests.swift */; };
 		781396212587E84700D2DE7D /* quoteroUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781396202587E84700D2DE7D /* quoteroUITests.swift */; };
 		788B08472598F00B00765D63 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 788B08462598F00B00765D63 /* GoogleService-Info.plist */; };
-		EB41F8C2B2E3EE30BBEC3E95 /* Pods_quotero.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFEA3886C564EB54BF5DBBA5 /* Pods_quotero.framework */; };
+		78919CE4259CDCE300EE841B /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78919CE3259CDCE300EE841B /* Quote.swift */; };
+		78919CED259CDEBE00EE841B /* QuoteListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78919CEC259CDEBE00EE841B /* QuoteListView.swift */; };
+		8E30AE0020D4B9E8663CD985 /* Pods_quoteroTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 407A2FD45FE49E9685F0C423 /* Pods_quoteroTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,9 +39,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		23B43CD63FB88646B902E9AB /* Pods_quotero_quoteroUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_quotero_quoteroUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		43FF4CD3AE9273DA1FFAAF96 /* Pods_quoteroTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_quoteroTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5B8BFD417AEEB1A504142AAE /* Pods-quotero.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-quotero.release.xcconfig"; path = "Target Support Files/Pods-quotero/Pods-quotero.release.xcconfig"; sourceTree = "<group>"; };
+		0FDB1F5258DFD63798F109C5 /* Pods-quotero-quoteroUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-quotero-quoteroUITests.release.xcconfig"; path = "Target Support Files/Pods-quotero-quoteroUITests/Pods-quotero-quoteroUITests.release.xcconfig"; sourceTree = "<group>"; };
+		106B262DF677B7ADB6699ADC /* Pods_quotero.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_quotero.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2272F52431F3D18EB1A45821 /* Pods-quotero.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-quotero.release.xcconfig"; path = "Target Support Files/Pods-quotero/Pods-quotero.release.xcconfig"; sourceTree = "<group>"; };
+		407A2FD45FE49E9685F0C423 /* Pods_quoteroTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_quoteroTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5FD0CD0EC03B50E3E62A797A /* Pods_quotero_quoteroUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_quotero_quoteroUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		684033F670C74C6E494F8996 /* Pods-quotero-quoteroUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-quotero-quoteroUITests.debug.xcconfig"; path = "Target Support Files/Pods-quotero-quoteroUITests/Pods-quotero-quoteroUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		781396002587E84500D2DE7D /* quotero.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = quotero.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		781396032587E84600D2DE7D /* quoteroApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = quoteroApp.swift; sourceTree = "<group>"; };
 		781396052587E84600D2DE7D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -52,13 +57,12 @@
 		7813961C2587E84700D2DE7D /* quoteroUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = quoteroUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		781396202587E84700D2DE7D /* quoteroUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = quoteroUITests.swift; sourceTree = "<group>"; };
 		781396222587E84700D2DE7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7834B1A2C1391021BCD9FFD9 /* Pods-quoteroTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-quoteroTests.release.xcconfig"; path = "Target Support Files/Pods-quoteroTests/Pods-quoteroTests.release.xcconfig"; sourceTree = "<group>"; };
 		788B08462598F00B00765D63 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
-		801FBB7D2998CB5882FBD4BD /* Pods-quotero-quoteroUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-quotero-quoteroUITests.release.xcconfig"; path = "Target Support Files/Pods-quotero-quoteroUITests/Pods-quotero-quoteroUITests.release.xcconfig"; sourceTree = "<group>"; };
-		CA4D7B8F2667A7E0753626E6 /* Pods-quoteroTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-quoteroTests.debug.xcconfig"; path = "Target Support Files/Pods-quoteroTests/Pods-quoteroTests.debug.xcconfig"; sourceTree = "<group>"; };
-		CD3058FB8EC76E81AA93F0DA /* Pods-quotero-quoteroUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-quotero-quoteroUITests.debug.xcconfig"; path = "Target Support Files/Pods-quotero-quoteroUITests/Pods-quotero-quoteroUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		DFEA3886C564EB54BF5DBBA5 /* Pods_quotero.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_quotero.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E2EBBC17F63CE77B981105B8 /* Pods-quotero.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-quotero.debug.xcconfig"; path = "Target Support Files/Pods-quotero/Pods-quotero.debug.xcconfig"; sourceTree = "<group>"; };
+		78919CE3259CDCE300EE841B /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
+		78919CEC259CDEBE00EE841B /* QuoteListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteListView.swift; sourceTree = "<group>"; };
+		78E4FC19A8E261978C566E9E /* Pods-quotero.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-quotero.debug.xcconfig"; path = "Target Support Files/Pods-quotero/Pods-quotero.debug.xcconfig"; sourceTree = "<group>"; };
+		E49B6192B073B167B2AD26B9 /* Pods-quoteroTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-quoteroTests.release.xcconfig"; path = "Target Support Files/Pods-quoteroTests/Pods-quoteroTests.release.xcconfig"; sourceTree = "<group>"; };
+		E8060674215CB106155F35C5 /* Pods-quoteroTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-quoteroTests.debug.xcconfig"; path = "Target Support Files/Pods-quoteroTests/Pods-quoteroTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,7 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EB41F8C2B2E3EE30BBEC3E95 /* Pods_quotero.framework in Frameworks */,
+				46166C91D1E64926EC0127DA /* Pods_quotero.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,7 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0CD0317C7C2C2B8E53788E84 /* Pods_quoteroTests.framework in Frameworks */,
+				8E30AE0020D4B9E8663CD985 /* Pods_quoteroTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,13 +86,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6BE24C37ED4DDD0CFC1B2BED /* Pods_quotero_quoteroUITests.framework in Frameworks */,
+				1FB5DE759741CC3DCF4126D1 /* Pods_quotero_quoteroUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		10994E9EC0897646B117583D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				78E4FC19A8E261978C566E9E /* Pods-quotero.debug.xcconfig */,
+				2272F52431F3D18EB1A45821 /* Pods-quotero.release.xcconfig */,
+				684033F670C74C6E494F8996 /* Pods-quotero-quoteroUITests.debug.xcconfig */,
+				0FDB1F5258DFD63798F109C5 /* Pods-quotero-quoteroUITests.release.xcconfig */,
+				E8060674215CB106155F35C5 /* Pods-quoteroTests.debug.xcconfig */,
+				E49B6192B073B167B2AD26B9 /* Pods-quoteroTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		4AD5DFEE5284CE82B240912F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				106B262DF677B7ADB6699ADC /* Pods_quotero.framework */,
+				5FD0CD0EC03B50E3E62A797A /* Pods_quotero_quoteroUITests.framework */,
+				407A2FD45FE49E9685F0C423 /* Pods_quoteroTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		781395F72587E84500D2DE7D = {
 			isa = PBXGroup;
 			children = (
@@ -96,8 +124,8 @@
 				781396142587E84700D2DE7D /* quoteroTests */,
 				7813961F2587E84700D2DE7D /* quoteroUITests */,
 				781396012587E84500D2DE7D /* Products */,
-				B2A3EE779BF823F268014714 /* Pods */,
-				B064E1DFAB360C8A8D7A05AB /* Frameworks */,
+				10994E9EC0897646B117583D /* Pods */,
+				4AD5DFEE5284CE82B240912F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -114,6 +142,8 @@
 		781396022587E84500D2DE7D /* quotero */ = {
 			isa = PBXGroup;
 			children = (
+				78919CEB259CDCF400EE841B /* Views */,
+				78919CE2259CDCCA00EE841B /* Models */,
 				788B08462598F00B00765D63 /* GoogleService-Info.plist */,
 				781396032587E84600D2DE7D /* quoteroApp.swift */,
 				781396052587E84600D2DE7D /* ContentView.swift */,
@@ -150,28 +180,20 @@
 			path = quoteroUITests;
 			sourceTree = "<group>";
 		};
-		B064E1DFAB360C8A8D7A05AB /* Frameworks */ = {
+		78919CE2259CDCCA00EE841B /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				DFEA3886C564EB54BF5DBBA5 /* Pods_quotero.framework */,
-				23B43CD63FB88646B902E9AB /* Pods_quotero_quoteroUITests.framework */,
-				43FF4CD3AE9273DA1FFAAF96 /* Pods_quoteroTests.framework */,
+				78919CE3259CDCE300EE841B /* Quote.swift */,
 			);
-			name = Frameworks;
+			path = Models;
 			sourceTree = "<group>";
 		};
-		B2A3EE779BF823F268014714 /* Pods */ = {
+		78919CEB259CDCF400EE841B /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				E2EBBC17F63CE77B981105B8 /* Pods-quotero.debug.xcconfig */,
-				5B8BFD417AEEB1A504142AAE /* Pods-quotero.release.xcconfig */,
-				CD3058FB8EC76E81AA93F0DA /* Pods-quotero-quoteroUITests.debug.xcconfig */,
-				801FBB7D2998CB5882FBD4BD /* Pods-quotero-quoteroUITests.release.xcconfig */,
-				CA4D7B8F2667A7E0753626E6 /* Pods-quoteroTests.debug.xcconfig */,
-				7834B1A2C1391021BCD9FFD9 /* Pods-quoteroTests.release.xcconfig */,
+				78919CEC259CDEBE00EE841B /* QuoteListView.swift */,
 			);
-			name = Pods;
-			path = Pods;
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -185,7 +207,6 @@
 				781395FC2587E84500D2DE7D /* Sources */,
 				781395FD2587E84500D2DE7D /* Frameworks */,
 				781395FE2587E84500D2DE7D /* Resources */,
-				4627ED0C842E9631B9147DDC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -223,7 +244,6 @@
 				781396182587E84700D2DE7D /* Sources */,
 				781396192587E84700D2DE7D /* Frameworks */,
 				7813961A2587E84700D2DE7D /* Resources */,
-				2DC865DCA7D614BE73A15F94 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -258,7 +278,7 @@
 				};
 			};
 			buildConfigurationList = 781395FB2587E84500D2DE7D /* Build configuration list for PBXProject "quotero" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 12.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -305,40 +325,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2DC865DCA7D614BE73A15F94 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-quotero-quoteroUITests/Pods-quotero-quoteroUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-quotero-quoteroUITests/Pods-quotero-quoteroUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-quotero-quoteroUITests/Pods-quotero-quoteroUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		4627ED0C842E9631B9147DDC /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-quotero/Pods-quotero-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-quotero/Pods-quotero-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-quotero/Pods-quotero-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		46D08AC02958163935CAE186 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -413,7 +399,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				781396062587E84600D2DE7D /* ContentView.swift in Sources */,
+				78919CE4259CDCE300EE841B /* Quote.swift in Sources */,
 				781396042587E84600D2DE7D /* quoteroApp.swift in Sources */,
+				78919CED259CDEBE00EE841B /* QuoteListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -567,7 +555,7 @@
 		};
 		781396262587E84700D2DE7D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E2EBBC17F63CE77B981105B8 /* Pods-quotero.debug.xcconfig */;
+			baseConfigurationReference = 78E4FC19A8E261978C566E9E /* Pods-quotero.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -590,7 +578,7 @@
 		};
 		781396272587E84700D2DE7D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5B8BFD417AEEB1A504142AAE /* Pods-quotero.release.xcconfig */;
+			baseConfigurationReference = 2272F52431F3D18EB1A45821 /* Pods-quotero.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -613,7 +601,7 @@
 		};
 		781396292587E84700D2DE7D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CA4D7B8F2667A7E0753626E6 /* Pods-quoteroTests.debug.xcconfig */;
+			baseConfigurationReference = E8060674215CB106155F35C5 /* Pods-quoteroTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -635,7 +623,7 @@
 		};
 		7813962A2587E84700D2DE7D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7834B1A2C1391021BCD9FFD9 /* Pods-quoteroTests.release.xcconfig */;
+			baseConfigurationReference = E49B6192B073B167B2AD26B9 /* Pods-quoteroTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -657,7 +645,7 @@
 		};
 		7813962C2587E84700D2DE7D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CD3058FB8EC76E81AA93F0DA /* Pods-quotero-quoteroUITests.debug.xcconfig */;
+			baseConfigurationReference = 684033F670C74C6E494F8996 /* Pods-quotero-quoteroUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -677,7 +665,7 @@
 		};
 		7813962D2587E84700D2DE7D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 801FBB7D2998CB5882FBD4BD /* Pods-quotero-quoteroUITests.release.xcconfig */;
+			baseConfigurationReference = 0FDB1F5258DFD63798F109C5 /* Pods-quotero-quoteroUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
