@@ -12,16 +12,13 @@ struct QuoteListView: View {
     var quotes: [Quote] = testDataQuotes
     
     var body: some View {
-        
-        NavigationView {
-            VStack(alignment: .leading) {
+            VStack() {
                 List {
                     ForEach(self.quotes) {
                         quote in QuoteCell(quote: quote)
                     }
                 }
-            }.navigationBarTitle("Quotes")
-        }
+            }.navigationTitle("Quotes")
     }
 }
 
@@ -31,6 +28,11 @@ struct QuoteCell: View {
     var body: some View {
         VStack {
             Text(quote.body).padding().font(.body)
+            Image("quoteroLogo")
+                .resizable()
+                .scaledToFit()
+                
+        
             Text(quote.author).padding().font(.caption)
         }
     }
@@ -38,6 +40,8 @@ struct QuoteCell: View {
 
 struct QuoteListView_Previews: PreviewProvider {
     static var previews: some View {
-        QuoteListView()
+        NavigationView {
+            QuoteListView()
+        }
     }
 }
