@@ -8,25 +8,27 @@
 import SwiftUI
 
 struct Quote: Codable, Identifiable {
-    let id = UUID()
-    var text: String
+    var id = UUID()
+    var content: String
     var author: String
 }
 
-class Api {
-    func getQuotes(completion: @escaping ([Quote]) -> ()) {
-        guard let url = URL(string: "https://type.fit/api/quotes") else {return}
-        
-        URLSession.shared.dataTask(with: url) {
-            (data, _, _) in
-            let quotes = try! JSONDecoder().decode([Quote].self, from: data!)
-            DispatchQueue.main.async {
-                completion(quotes)
-            }
-        }
-        .resume()
-    }
-}
+//class Api {
+//    func getQuotes(completion: @escaping ([Quote]) -> ()) {
+//        guard let url = URL(string: "https://api.quotable.io/quotes") else {return}
+//        
+//        URLSession.shared.dataTask(with: url) {
+//            (data, _, _) in
+//            
+//            let quotes = try! JSONDecoder().decode([Quote].self, from: data)
+//            print(quotes)
+//            DispatchQueue.main.async {
+//                completion(quotes)
+//            }
+//        }
+//        .resume()
+//    }
+//}
 
 //#if DEBUG
 //let testDataQuotes = [
