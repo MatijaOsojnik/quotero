@@ -30,7 +30,7 @@ struct quoteroApp: App {
                     Text("Today")
                 }
                 NavigationView {
-                    ContentView()
+                    PostList()
                 }
                 .tabItem {
                     Image(systemName: "sun.max.fill")
