@@ -21,40 +21,72 @@ struct QuoteListView: View {
     @ObservedObject var viewModel = QuotesViewModel()
     
     var body: some View {
+        ScrollView {
             VStack() {
-                VStack(alignment: .leading) {
-                        Text("Popular quotes")
-                            .font(.headline)
-                            .foregroundColor(colorScheme == .dark ? Color.black : Color.white)
-                        Text("Find your favorite quote")
-                            .font(.callout)
-                            .foregroundColor(colorScheme == .dark ? Color.black : Color.white)
-                }
-                
-                .background(
-                    Image("quotes_background")
-      
-                )
+                NavigationLink(
+                    destination: PostList(),
+                    label: {
+                        VStack(alignment: .leading) {
+                            
+                            ZStack {
+                                Image("quotes_background")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                VStack (alignment: .leading) {
+                                    Text("Popular quotes")
+                                        .font(.headline)
+                                        .foregroundColor(colorScheme == .dark ? Color.black : Color.white)
+                                    Text("Find your favorite quote")
+                                        .font(.callout)
+                                        .foregroundColor(colorScheme == .dark ? Color.black : Color.white)
+                                }
+
+                            }
+                        }
+                    })
+            
                 .clipShape(RoundedRectangle(cornerRadius: 20))
                 .shadow(color:Color(.white).opacity(0.3), radius: 7, x: 0, y: 7)
                 .shadow(color:Color(.white).opacity(0.1), radius: 2, x: 0, y: 2)
-                List(viewModel.quotes) {
-                    quote in
-                    VStack {
-                        Text(quote.body).padding()
-                        Text(quote.author)
-                        NavigationLink(
-                            destination: QuoteSingleView(quote: quote),
-                            label: {
-                                Text("View Quote")
-                            })
-                    }.cornerRadius(10.0)
-                }.lineLimit(3)
-                .navigationBarTitle(Date().dayOfWeek()!.lowercased() + ".")
-                .onAppear() {
+                
+                
+                VStack(alignment: .leading) {
+                    ForEach(viewModel.quotes, id: \.id) {
+                        quote in
+                        VStack {
+                            Text(quote.body).padding()
+                            Text(quote.author).padding(.all, 5)
+                            NavigationLink(
+                                destination: QuoteSingleView(quote: quote),
+                                label: {
+                                    Text("View Quote")
+                                })
+                        }.clipShape(RoundedRectangle(cornerRadius: 20))
+                        .shadow(color:Color(.white).opacity(0.3), radius: 7, x: 0, y: 7)
+                        .shadow(color:Color(.white).opacity(0.1), radius: 2, x: 0, y: 2)
+                    }.lineLimit(3)
+                }.onAppear() {
                     self.viewModel.loadData()
+                    
                 }
+//                List(viewModel.quotes) {
+//                    quote in
+//                    VStack {
+//                        Text(quote.body).padding()
+//                        Text(quote.author)
+//                        NavigationLink(
+//                            destination: QuoteSingleView(quote: quote),
+//                            label: {
+//                                Text("View Quote")
+//                            })
+//                    }.cornerRadius(10.0)
+//                }.lineLimit(3)
+//                .navigationBarTitle(Date().dayOfWeek()!.lowercased() + ".")
+//                .onAppear() {
+//                    self.viewModel.loadData()
+//                }
             }
+        }.navigationTitle(Date().dayOfWeek()!.lowercased() + ".")
     }
 }
 

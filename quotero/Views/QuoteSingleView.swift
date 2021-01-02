@@ -56,8 +56,11 @@ struct QuoteSingleView: View {
                     ZStack {
                         RoundedRectangle(cornerRadius: 50.0)
                             .fill(colorScheme == .dark ? Color.white : Color.black)
-//                            .shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y: 10)
-//                            .shadow(color: Color.white.opacity(0.7), radius: 10, x: -5, y: -5)
+                            .padding()
+//                            .shadow(color: Color(.gray), radius: 3, x: 7, y: 5)
+                            
+                            .shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y: 10)
+                            .shadow(color: Color.white.opacity(0.7), radius: 10, x: -5, y: -5)
                         VStack {
                             Text(quote.body)
                                 .foregroundColor(colorScheme == .dark ? Color.black : Color.white)
@@ -69,7 +72,7 @@ struct QuoteSingleView: View {
                                 .foregroundColor(colorScheme == .dark ? Color.black : Color.white)
                                 .font(.caption)
                                 .padding(.all, 5)
-                        }
+                        }.padding(.all, 10)
                             
                     }
                     if isToggled {
@@ -111,6 +114,6 @@ struct QuoteSingleView: View {
 
 struct QuoteSingleView_Previews: PreviewProvider {
     static var previews: some View {
-        QuoteSingleView(quote: QuotesViewModel().quotes[0])
+        QuoteSingleView(quote: QuotesViewModel().quotes[1])
     }
 }
