@@ -12,6 +12,8 @@ extension Color {
 }
 
 struct SimpleButtonStyle: ButtonStyle {
+    @Environment(\.colorScheme) var colorScheme
+    
     func makeBody(configuration: Self.Configuration) -> some View {
         configuration.label
             .padding(20)
@@ -19,14 +21,15 @@ struct SimpleButtonStyle: ButtonStyle {
                 Group {
                     if configuration.isPressed {
                         Circle()
-                            .fill(Color.offWhite)
-                            .shadow(color: Color.black.opacity(0.2), radius: 10, x: -5, y: -5)
-                            .shadow(color: Color.white.opacity(0.7), radius: 10, x: 10, y: 10)
+                            .fill(Color.white)
+                            .foregroundColor(Color.white)
+//                            .shadow(color: Color.black.opacity(0.2), radius: 5, x: -5, y: -5)
+//                            .shadow(color: Color.white.opacity(0.7), radius: 5, x: 10, y: 10)
                     } else {
                         Circle()
-                            .fill(Color.offWhite)
-                            .shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y: 10)
-                            .shadow(color: Color.white.opacity(0.7), radius: 10, x: -5, y: -5)
+                            .fill(Color.white)
+//                            .shadow(color: Color.black.opacity(0.2), radius: 5, x: 10, y: 10)
+//                            .shadow(color: Color.white.opacity(0.7), radius: 5, x: -5, y: -5)
                     }
                 }
             )
@@ -35,26 +38,38 @@ struct SimpleButtonStyle: ButtonStyle {
 
 struct QuoteSingleView: View {
     
+    @State var quote: Quote
+    
+    @ObservedObject var viewModel = QuotesViewModel()
+    
 //    var quotes: [Quote] = testDataQuotes
+    
+    @Environment(\.colorScheme) var colorScheme
     
     @State private var isToggled = false
     
     var body: some View {
      
             ZStack {
-                Color.offWhite
                 
                 VStack {
                     ZStack {
-                        RoundedRectangle(cornerRadius: /*@START_MENU_TOKEN@*/25.0/*@END_MENU_TOKEN@*/)
-                            .fill(Color.offWhite)
-                            .padding()
-                            .shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y: 10)
-                            .shadow(color: Color.white.opacity(0.7), radius: 10, x: -5, y: -5)
-//                        Text(self.quotes[0].body)
-//                            .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/, 20)
-//                            .font(.body)
-//                            .lineSpacing(5)
+                        RoundedRectangle(cornerRadius: 50.0)
+                            .fill(colorScheme == .dark ? Color.white : Color.black)
+//                            .shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y: 10)
+//                            .shadow(color: Color.white.opacity(0.7), radius: 10, x: -5, y: -5)
+                        VStack {
+                            Text(quote.body)
+                                .foregroundColor(colorScheme == .dark ? Color.black : Color.white)
+                                .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/, 20)
+                                .font(.body)
+                                .lineSpacing(5)
+                                
+                            Text(quote.author)
+                                .foregroundColor(colorScheme == .dark ? Color.black : Color.white)
+                                .font(.caption)
+                                .padding(.all, 5)
+                        }
                             
                     }
                     if isToggled {
@@ -78,15 +93,16 @@ struct QuoteSingleView: View {
                                 .resizable()
                                 .frame(width: 20.0, height: 20.0)
                                 .foregroundColor(.red)
+                              
 
                         }
                         .padding()
                         .buttonStyle(SimpleButtonStyle())
                     }
-                }.padding()
+                }
                 
             }
-            .edgesIgnoringSafeArea(.all)
+            .edgesIgnoringSafeArea(.horizontal)
         
         
         //Text(self.quotes[0].body)
@@ -95,6 +111,6 @@ struct QuoteSingleView: View {
 
 struct QuoteSingleView_Previews: PreviewProvider {
     static var previews: some View {
-        QuoteSingleView()
+        QuoteSingleView(quote: QuotesViewModel().quotes[0])
     }
 }

@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		780B6405259DDF3E0077CB1E /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780B6404259DDF3E0077CB1E /* Post.swift */; };
 		781396042587E84600D2DE7D /* quoteroApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781396032587E84600D2DE7D /* quoteroApp.swift */; };
 		781396062587E84600D2DE7D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781396052587E84600D2DE7D /* ContentView.swift */; };
 		781396082587E84700D2DE7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 781396072587E84700D2DE7D /* Assets.xcassets */; };
@@ -16,8 +15,8 @@
 		781396212587E84700D2DE7D /* quoteroUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781396202587E84700D2DE7D /* quoteroUITests.swift */; };
 		781DCCA3259DE31D0092E09D /* PostList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781DCCA2259DE31D0092E09D /* PostList.swift */; };
 		783C33EA259DC74E00328149 /* QuoteSingleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783C33E9259DC74E00328149 /* QuoteSingleView.swift */; };
+		7884BE2F25A06F3200A37327 /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7884BE2E25A06F3200A37327 /* Quote.swift */; };
 		788B08472598F00B00765D63 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 788B08462598F00B00765D63 /* GoogleService-Info.plist */; };
-		78919CE4259CDCE300EE841B /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78919CE3259CDCE300EE841B /* Quote.swift */; };
 		78919CED259CDEBE00EE841B /* QuoteListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78919CEC259CDEBE00EE841B /* QuoteListView.swift */; };
 		789EE469259F96CF00CF485D /* QuoteRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789EE468259F96CF00CF485D /* QuoteRepository.swift */; };
 		78BA2D5F25A0562600A861A9 /* QuotesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BA2D5E25A0562600A861A9 /* QuotesViewModel.swift */; };
@@ -46,7 +45,6 @@
 /* Begin PBXFileReference section */
 		1DEA7DF0119E695E1D3C512E /* Pods_quotero.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_quotero.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		71377FFCC9502286889E4AC8 /* Pods-quotero.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-quotero.debug.xcconfig"; path = "Target Support Files/Pods-quotero/Pods-quotero.debug.xcconfig"; sourceTree = "<group>"; };
-		780B6404259DDF3E0077CB1E /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		781396002587E84500D2DE7D /* quotero.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = quotero.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		781396032587E84600D2DE7D /* quoteroApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = quoteroApp.swift; sourceTree = "<group>"; };
 		781396052587E84600D2DE7D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -61,8 +59,8 @@
 		781396222587E84700D2DE7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		781DCCA2259DE31D0092E09D /* PostList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostList.swift; sourceTree = "<group>"; };
 		783C33E9259DC74E00328149 /* QuoteSingleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteSingleView.swift; sourceTree = "<group>"; };
+		7884BE2E25A06F3200A37327 /* Quote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Quote.swift; path = "../../../../../Library/Mobile Documents/com~apple~CloudDocs/.Trash/Quote.swift"; sourceTree = "<group>"; };
 		788B08462598F00B00765D63 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
-		78919CE3259CDCE300EE841B /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
 		78919CEC259CDEBE00EE841B /* QuoteListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteListView.swift; sourceTree = "<group>"; };
 		789EE468259F96CF00CF485D /* QuoteRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteRepository.swift; sourceTree = "<group>"; };
 		78BA2D5E25A0562600A861A9 /* QuotesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesViewModel.swift; sourceTree = "<group>"; };
@@ -141,10 +139,10 @@
 		781396022587E84500D2DE7D /* quotero */ = {
 			isa = PBXGroup;
 			children = (
+				7884BE2D25A06F2400A37327 /* Models */,
 				78BA2D5D25A0560C00A861A9 /* ModelViews */,
 				789EE467259F96B300CF485D /* Repositories */,
 				78919CEB259CDCF400EE841B /* Views */,
-				78919CE2259CDCCA00EE841B /* Models */,
 				788B08462598F00B00765D63 /* GoogleService-Info.plist */,
 				781396032587E84600D2DE7D /* quoteroApp.swift */,
 				781396052587E84600D2DE7D /* ContentView.swift */,
@@ -181,11 +179,10 @@
 			path = quoteroUITests;
 			sourceTree = "<group>";
 		};
-		78919CE2259CDCCA00EE841B /* Models */ = {
+		7884BE2D25A06F2400A37327 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				78919CE3259CDCE300EE841B /* Quote.swift */,
-				780B6404259DDF3E0077CB1E /* Post.swift */,
+				7884BE2E25A06F3200A37327 /* Quote.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -467,9 +464,8 @@
 				781396062587E84600D2DE7D /* ContentView.swift in Sources */,
 				78BA2D5F25A0562600A861A9 /* QuotesViewModel.swift in Sources */,
 				783C33EA259DC74E00328149 /* QuoteSingleView.swift in Sources */,
-				78919CE4259CDCE300EE841B /* Quote.swift in Sources */,
-				780B6405259DDF3E0077CB1E /* Post.swift in Sources */,
 				781396042587E84600D2DE7D /* quoteroApp.swift in Sources */,
+				7884BE2F25A06F3200A37327 /* Quote.swift in Sources */,
 				78919CED259CDEBE00EE841B /* QuoteListView.swift in Sources */,
 				789EE469259F96CF00CF485D /* QuoteRepository.swift in Sources */,
 				781DCCA3259DE31D0092E09D /* PostList.swift in Sources */,

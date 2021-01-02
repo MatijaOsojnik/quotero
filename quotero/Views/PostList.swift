@@ -16,6 +16,11 @@ struct PostList: View {
             VStack {
                 Text(quote.body).padding()
                 Text(quote.author)
+                NavigationLink(
+                    destination: QuoteSingleView(quote: quote),
+                    label: {
+                        Text("View Quote")
+                    })
             }
         }
         .navigationBarTitle("Quotes")

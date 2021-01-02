@@ -32,6 +32,7 @@ struct quoteroApp: App {
                 NavigationView {
                     PostList()
                 }
+                
                 .tabItem {
                     Image(systemName: "sun.max.fill")
                     Text("Journey")
@@ -43,7 +44,7 @@ struct quoteroApp: App {
                     Image(systemName: "heart.text.square.fill")
                     Text("Liked")
                 }
-            }
+            }.accentColor(.white)
             
         
         }
