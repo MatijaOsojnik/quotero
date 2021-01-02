@@ -8,16 +8,20 @@
 import SwiftUI
 
 struct PostList: View {
-    @State var quotes: [Quote] = []
+    @ObservedObject var viewModel = QuotesViewModel()
+    
     var body: some View {
-        List(quotes) {
-            quote in Text(quote.author)
-        }
-        .onAppear {
-            Api().getQuotes { (quotes) in self.quotes = quotes
+        List(viewModel.quotes) {
+            quote in
+            VStack {
+                Text(quote.body).padding()
+                Text(quote.author)
             }
         }
-
+        .navigationBarTitle("Quotes")
+        .onAppear() {
+            self.viewModel.loadData()
+        }
     }
 }
 

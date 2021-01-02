@@ -5,12 +5,15 @@
 //  Created by Matija Osojnik on 30/12/2020.
 //
 
-import SwiftUI
+import Foundation
+import FirebaseFirestore
+import FirebaseFirestoreSwift
 
 struct Quote: Codable, Identifiable {
-    var id = UUID()
-    var content: String
+    @DocumentID var id: String?
+    var body: String
     var author: String
+    @ServerTimestamp var createdTime: Timestamp?
 }
 
 //class Api {
