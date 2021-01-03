@@ -21,6 +21,7 @@ struct quoteroApp: App {
     
     init() {
         FirebaseApp.configure()
+        AuthenticationService().signIn()
     }
     
     var body: some Scene {

@@ -18,8 +18,10 @@
 		7884BE2F25A06F3200A37327 /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7884BE2E25A06F3200A37327 /* Quote.swift */; };
 		788B08472598F00B00765D63 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 788B08462598F00B00765D63 /* GoogleService-Info.plist */; };
 		78919CED259CDEBE00EE841B /* QuoteListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78919CEC259CDEBE00EE841B /* QuoteListView.swift */; };
-		789EE469259F96CF00CF485D /* QuoteRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789EE468259F96CF00CF485D /* QuoteRepository.swift */; };
 		78BA2D5F25A0562600A861A9 /* QuotesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BA2D5E25A0562600A861A9 /* QuotesViewModel.swift */; };
+		78D4888725A1EAA10035391E /* Neumorphic in Frameworks */ = {isa = PBXBuildFile; productRef = 78D4888625A1EAA10035391E /* Neumorphic */; };
+		78D4888D25A1F4A20035391E /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D4888C25A1F4A20035391E /* AuthenticationService.swift */; };
+		78D4889525A1FD720035391E /* LikeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D4889425A1FD720035391E /* LikeService.swift */; };
 		8ADC8AAB845DC861DCEF6BD1 /* Pods_quoteroTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEC0BC9CDFA7EBEC80CEEF2B /* Pods_quoteroTests.framework */; };
 		8EF117206D7DCB75AB63D079 /* Pods_quotero_quoteroUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC8982065EBEB1193E852B40 /* Pods_quotero_quoteroUITests.framework */; };
 		F6DAF5709FD342F5EF6D94BD /* Pods_quotero.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DEA7DF0119E695E1D3C512E /* Pods_quotero.framework */; };
@@ -62,8 +64,9 @@
 		7884BE2E25A06F3200A37327 /* Quote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Quote.swift; path = "../../../../../Library/Mobile Documents/com~apple~CloudDocs/.Trash/Quote.swift"; sourceTree = "<group>"; };
 		788B08462598F00B00765D63 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		78919CEC259CDEBE00EE841B /* QuoteListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteListView.swift; sourceTree = "<group>"; };
-		789EE468259F96CF00CF485D /* QuoteRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteRepository.swift; sourceTree = "<group>"; };
 		78BA2D5E25A0562600A861A9 /* QuotesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesViewModel.swift; sourceTree = "<group>"; };
+		78D4888C25A1F4A20035391E /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
+		78D4889425A1FD720035391E /* LikeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeService.swift; sourceTree = "<group>"; };
 		8A507290C42CA48127376E0C /* Pods-quotero-quoteroUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-quotero-quoteroUITests.release.xcconfig"; path = "Target Support Files/Pods-quotero-quoteroUITests/Pods-quotero-quoteroUITests.release.xcconfig"; sourceTree = "<group>"; };
 		9DA9BE2355EA3F6314D118C0 /* Pods-quotero-quoteroUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-quotero-quoteroUITests.debug.xcconfig"; path = "Target Support Files/Pods-quotero-quoteroUITests/Pods-quotero-quoteroUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A169F672347F9EFD31ECAFD8 /* Pods-quotero.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-quotero.release.xcconfig"; path = "Target Support Files/Pods-quotero/Pods-quotero.release.xcconfig"; sourceTree = "<group>"; };
@@ -78,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78D4888725A1EAA10035391E /* Neumorphic in Frameworks */,
 				F6DAF5709FD342F5EF6D94BD /* Pods_quotero.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -139,9 +143,9 @@
 		781396022587E84500D2DE7D /* quotero */ = {
 			isa = PBXGroup;
 			children = (
+				78D4888B25A1F4900035391E /* Services */,
 				7884BE2D25A06F2400A37327 /* Models */,
 				78BA2D5D25A0560C00A861A9 /* ModelViews */,
-				789EE467259F96B300CF485D /* Repositories */,
 				78919CEB259CDCF400EE841B /* Views */,
 				788B08462598F00B00765D63 /* GoogleService-Info.plist */,
 				781396032587E84600D2DE7D /* quoteroApp.swift */,
@@ -197,20 +201,21 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		789EE467259F96B300CF485D /* Repositories */ = {
-			isa = PBXGroup;
-			children = (
-				789EE468259F96CF00CF485D /* QuoteRepository.swift */,
-			);
-			path = Repositories;
-			sourceTree = "<group>";
-		};
 		78BA2D5D25A0560C00A861A9 /* ModelViews */ = {
 			isa = PBXGroup;
 			children = (
 				78BA2D5E25A0562600A861A9 /* QuotesViewModel.swift */,
 			);
 			path = ModelViews;
+			sourceTree = "<group>";
+		};
+		78D4888B25A1F4900035391E /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				78D4888C25A1F4A20035391E /* AuthenticationService.swift */,
+				78D4889425A1FD720035391E /* LikeService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		EF11A8CFA8B711E7574B8582 /* Frameworks */ = {
@@ -241,6 +246,9 @@
 			dependencies = (
 			);
 			name = quotero;
+			packageProductDependencies = (
+				78D4888625A1EAA10035391E /* Neumorphic */,
+			);
 			productName = quotero;
 			productReference = 781396002587E84500D2DE7D /* quotero.app */;
 			productType = "com.apple.product-type.application";
@@ -315,6 +323,9 @@
 				Base,
 			);
 			mainGroup = 781395F72587E84500D2DE7D;
+			packageReferences = (
+				78D4888525A1EAA10035391E /* XCRemoteSwiftPackageReference "neumorphic" */,
+			);
 			productRefGroup = 781396012587E84500D2DE7D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -464,10 +475,11 @@
 				781396062587E84600D2DE7D /* ContentView.swift in Sources */,
 				78BA2D5F25A0562600A861A9 /* QuotesViewModel.swift in Sources */,
 				783C33EA259DC74E00328149 /* QuoteSingleView.swift in Sources */,
+				78D4888D25A1F4A20035391E /* AuthenticationService.swift in Sources */,
+				78D4889525A1FD720035391E /* LikeService.swift in Sources */,
 				781396042587E84600D2DE7D /* quoteroApp.swift in Sources */,
 				7884BE2F25A06F3200A37327 /* Quote.swift in Sources */,
 				78919CED259CDEBE00EE841B /* QuoteListView.swift in Sources */,
-				789EE469259F96CF00CF485D /* QuoteRepository.swift in Sources */,
 				781DCCA3259DE31D0092E09D /* PostList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -796,6 +808,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		78D4888525A1EAA10035391E /* XCRemoteSwiftPackageReference "neumorphic" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/costachung/neumorphic/";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.6;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		78D4888625A1EAA10035391E /* Neumorphic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 78D4888525A1EAA10035391E /* XCRemoteSwiftPackageReference "neumorphic" */;
+			productName = Neumorphic;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 781395F82587E84500D2DE7D /* Project object */;
 }

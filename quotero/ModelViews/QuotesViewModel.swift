@@ -26,6 +26,8 @@ class QuotesViewModel: ObservableObject {
                 
                 return try? queryDocumentSnapshot.data(as: Quote.self)
             }
+            
+            print(self.quotes)
 //                    let data = queryDocumentSnapshot.data()
 //
 //                    let body = data["body"] as? String ?? ""

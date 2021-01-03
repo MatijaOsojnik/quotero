@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Neumorphic
 
 extension Date {
     func dayOfWeek() -> String? {
@@ -44,6 +45,7 @@ struct QuoteListView: View {
                             }
                         }
                     })
+                    .padding(.all, 10)
             
                 .clipShape(RoundedRectangle(cornerRadius: 20))
                 .shadow(color:Color(.white).opacity(0.3), radius: 7, x: 0, y: 7)
@@ -53,18 +55,8 @@ struct QuoteListView: View {
                 VStack(alignment: .leading) {
                     ForEach(viewModel.quotes, id: \.id) {
                         quote in
-                        VStack {
-                            Text(quote.body).padding()
-                            Text(quote.author).padding(.all, 5)
-                            NavigationLink(
-                                destination: QuoteSingleView(quote: quote),
-                                label: {
-                                    Text("View Quote")
-                                })
-                        }.clipShape(RoundedRectangle(cornerRadius: 20))
-                        .shadow(color:Color(.white).opacity(0.3), radius: 7, x: 0, y: 7)
-                        .shadow(color:Color(.white).opacity(0.1), radius: 2, x: 0, y: 2)
-                    }.lineLimit(3)
+                        QuoteCell(quote: quote)
+                    }
                 }.onAppear() {
                     self.viewModel.loadData()
                     
@@ -87,6 +79,34 @@ struct QuoteListView: View {
 //                }
             }
         }.navigationTitle(Date().dayOfWeek()!.lowercased() + ".")
+    }
+}
+
+struct QuoteCell: View {
+    
+    var quote: Quote
+    
+    @Environment(\.colorScheme) var colorScheme
+    
+    var body: some View {
+        ZStack {
+            RoundedRectangle(cornerRadius: 20).fill(colorScheme == .dark ? Color.white : Color.black)
+                
+            VStack {
+                Text(quote.body).foregroundColor(colorScheme == .dark ? Color.black : Color.white)
+                    .fixedSize(horizontal: false, vertical: true)
+                    .font(.body)
+                    .padding(.all, 10)
+                
+                Text(quote.author)
+                    .foregroundColor(colorScheme == .dark ? Color.black : Color.white).padding()
+                    .font(.caption)
+                
+            }
+            .padding()
+            
+        }
+        .padding(.all, 10)
     }
 }
 

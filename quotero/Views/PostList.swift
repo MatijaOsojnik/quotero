@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct PostList: View {
+    
+    
+    
     @ObservedObject var viewModel = QuotesViewModel()
     
     var body: some View {

@@ -38,6 +38,8 @@ struct SimpleButtonStyle: ButtonStyle {
 
 struct QuoteSingleView: View {
     
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    
     @State var quote: Quote
     
     @ObservedObject var viewModel = QuotesViewModel()
@@ -47,6 +49,18 @@ struct QuoteSingleView: View {
     @Environment(\.colorScheme) var colorScheme
     
     @State private var isToggled = false
+    
+    var btnBack : some View { Button(action: {
+            self.presentationMode.wrappedValue.dismiss()
+            }) {
+                HStack {
+                Image(systemName: "chevron.backward.circle") // set image here
+                    .aspectRatio(contentMode: .fit)
+                    .foregroundColor(.white)
+                    Text("Go back")
+                }
+            }
+        }
     
     var body: some View {
      
@@ -77,6 +91,7 @@ struct QuoteSingleView: View {
                     }
                     if isToggled {
                         Button(action: {
+                            LikeService().unlikeQuote();
                             self.isToggled.toggle()
                         }) {
                             Image(systemName: "heart.fill")
@@ -90,7 +105,7 @@ struct QuoteSingleView: View {
                     }
                     else {
                         Button(action: {
-                            self.isToggled.toggle()
+                            LikeService().likeQuote();               self.isToggled.toggle()
                         }) {
                             Image(systemName: "heart")
                                 .resizable()
@@ -106,6 +121,8 @@ struct QuoteSingleView: View {
                 
             }
             .edgesIgnoringSafeArea(.horizontal)
+            .navigationBarBackButtonHidden(true)
+            .navigationBarItems(leading: btnBack)
         
         
         //Text(self.quotes[0].body)
