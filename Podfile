@@ -11,7 +11,6 @@ target 'quotero' do
   # Add the pods for the Firebase products you want to use in your app
   # For example, to use Firebase Authentication and Cloud Firestore
   pod 'Firebase/Auth'
-  pod 'FirebaseUI/Auth'
   pod 'Firebase/Firestore'
   pod 'FirebaseFirestoreSwift', '7.3.0-beta'
 
@@ -23,5 +22,17 @@ target 'quotero' do
   target 'quoteroUITests' do
     # Pods for testing
   end
+  
+  target 'QuoteWidgetExtension' do
+    
+    use_frameworks!
+    
+
+    # Add the pods for the Firebase products you want to use in your app
+    # For example, to use Firebase Authentication and Cloud Firestore
+    pod 'Firebase/Firestore'
+    pod 'FirebaseFirestoreSwift', '7.3.0-beta'
+  end
+    
 
 end

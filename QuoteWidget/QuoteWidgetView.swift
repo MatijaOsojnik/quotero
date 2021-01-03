@@ -12,27 +12,35 @@ import SwiftUI
 struct QuoteWidgetView: View {
     
     @Environment(\.colorScheme) var colorScheme
-    @ObservedObject var viewModel = QuotesViewModel()
+    var quote = Quote(id: "1235132rafvsdfAs", body: "You know you're in love when you can't fall asleep because reality is finally better than your dreams.", author: "Dr. Seuss", featured: true)
     
     
     var body: some View {
         ZStack {
-            Color(UIColor.init())
+            Color(UIColor.black)
             VStack {
-                ForEach(viewModel.quotes, id: \.id) {
-                    quote in
-                    if quote.featured {
-                        Text(quote.body)
-                            .font(.headline)
-                            .multilineTextAlignment(.center)
-                            .padding()
-                            .foregroundColor(.white)
-                    }
-                }
-                
+                QuoteCellWidget(quote: quote)
             }
-        }.onAppear() {
-            self.viewModel.loadData()
+        }
+    }
+}
+
+struct QuoteCellWidget: View {
+    var quote: Quote
+    
+    @Environment(\.colorScheme) var colorScheme
+    var body: some View {
+        VStack {
+            Text(quote.body)
+                .font(.headline)
+                .lineSpacing(5)
+                .multilineTextAlignment(.center)
+                .padding()
+                .foregroundColor(.white)
+            
+            Text(quote.author)
+                .font(.caption)
+                .foregroundColor(.white)
         }
     }
 }

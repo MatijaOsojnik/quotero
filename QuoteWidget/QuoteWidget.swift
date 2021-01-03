@@ -8,6 +8,7 @@
 import WidgetKit
 import SwiftUI
 import Intents
+import Firebase
 
 struct Provider: IntentTimelineProvider {
     func placeholder(in context: Context) -> SimpleEntry {
@@ -52,7 +53,7 @@ struct QuoteWidgetEntryView : View {
 @main
 struct QuoteWidget: Widget {
     init() {
-        FirebaseApp
+        FirebaseApp.configure()
     }
     let kind: String = "QuoteWidget"
 

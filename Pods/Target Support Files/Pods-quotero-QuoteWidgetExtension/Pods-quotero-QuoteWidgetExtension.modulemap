@@ -1,0 +1,6 @@
+framework module Pods_quotero_QuoteWidgetExtension {
+  umbrella header "Pods-quotero-QuoteWidgetExtension-umbrella.h"
+
+  export *
+  module * { export * }
+}

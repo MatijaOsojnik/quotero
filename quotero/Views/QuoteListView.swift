@@ -56,7 +56,7 @@ struct QuoteListView: View {
                 VStack(alignment: .leading) {
                     Text("quote of the day.")
                         .bold()
-                        .padding(.all, 10)
+                        
                         .font(.headline)
                     ForEach(viewModel.quotes, id: \.id) {
                         quote in
@@ -64,7 +64,9 @@ struct QuoteListView: View {
                             QuoteCell(quote: quote)
                         }
                     }
-                }.onAppear() {
+                }
+                .padding()
+                .onAppear() {
                     self.viewModel.loadData()
                 }
             }
