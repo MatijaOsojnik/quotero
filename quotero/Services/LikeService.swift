@@ -6,17 +6,38 @@
 //
 
 import Foundation
+import Combine
+import FirebaseAuth
 import Firebase
 import FirebaseFirestore
 
 
 class LikeService: ObservableObject {
   
-  @Published var user: User?
+    private var uid: String
     
     final var db = FirebaseFirestore.Firestore.firestore()
+    
+    private var cancellables = Set<AnyCancellable>()
+    
+    init() {
+        self.uid = Auth.auth().currentUser?.uid ?? "unknown"
+//        self.userId = AuthenticationService().$user.compactMap {
+//            user in
+//            user?.uid
+//        }.assign(to: \.userId, on: self)
+//        .store(in: &cancellables)
+//
+//        AuthenticationService().$user // (6)
+//          .receive(on: DispatchQueue.main) // (7)
+//          .sink { user in
+//            self.likedPosts() // (8)
+//          }
+//          .store(in: &cancellables)
+    }
   
   func likeQuote() {
+    print(self.uid)
     postLike()
   }
     
@@ -24,21 +45,14 @@ class LikeService: ObservableObject {
         deleteLike()
     }
     
+    func likedPosts() {
+        
+    }
+    
     
   
   private func postLike() {
-    Auth.auth().addStateDidChangeListener { (auth, user) in // (4)
-      print("Sign in state has changed.")
-      self.user = user
-      
-      if let user = user {
-        let anonymous = user.isAnonymous ? "anonymously " : ""
-        print("User signed in \(anonymous)with user ID \(user.uid).")
-      }
-      else {
-        print("User signed out.")
-      }
-    }
+    db.collection("quoteLikes").document()
   }
     
     private func deleteLike() {
