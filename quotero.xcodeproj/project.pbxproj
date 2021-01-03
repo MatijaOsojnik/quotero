@@ -22,6 +22,7 @@
 		78D4888725A1EAA10035391E /* Neumorphic in Frameworks */ = {isa = PBXBuildFile; productRef = 78D4888625A1EAA10035391E /* Neumorphic */; };
 		78D4888D25A1F4A20035391E /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D4888C25A1F4A20035391E /* AuthenticationService.swift */; };
 		78D4889525A1FD720035391E /* LikeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D4889425A1FD720035391E /* LikeService.swift */; };
+		78D4889A25A212550035391E /* LikedQuotesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D4889925A212550035391E /* LikedQuotesListView.swift */; };
 		8ADC8AAB845DC861DCEF6BD1 /* Pods_quoteroTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEC0BC9CDFA7EBEC80CEEF2B /* Pods_quoteroTests.framework */; };
 		8EF117206D7DCB75AB63D079 /* Pods_quotero_quoteroUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC8982065EBEB1193E852B40 /* Pods_quotero_quoteroUITests.framework */; };
 		F6DAF5709FD342F5EF6D94BD /* Pods_quotero.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DEA7DF0119E695E1D3C512E /* Pods_quotero.framework */; };
@@ -67,6 +68,7 @@
 		78BA2D5E25A0562600A861A9 /* QuotesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesViewModel.swift; sourceTree = "<group>"; };
 		78D4888C25A1F4A20035391E /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
 		78D4889425A1FD720035391E /* LikeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeService.swift; sourceTree = "<group>"; };
+		78D4889925A212550035391E /* LikedQuotesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikedQuotesListView.swift; sourceTree = "<group>"; };
 		8A507290C42CA48127376E0C /* Pods-quotero-quoteroUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-quotero-quoteroUITests.release.xcconfig"; path = "Target Support Files/Pods-quotero-quoteroUITests/Pods-quotero-quoteroUITests.release.xcconfig"; sourceTree = "<group>"; };
 		9DA9BE2355EA3F6314D118C0 /* Pods-quotero-quoteroUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-quotero-quoteroUITests.debug.xcconfig"; path = "Target Support Files/Pods-quotero-quoteroUITests/Pods-quotero-quoteroUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A169F672347F9EFD31ECAFD8 /* Pods-quotero.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-quotero.release.xcconfig"; path = "Target Support Files/Pods-quotero/Pods-quotero.release.xcconfig"; sourceTree = "<group>"; };
@@ -197,6 +199,7 @@
 				78919CEC259CDEBE00EE841B /* QuoteListView.swift */,
 				783C33E9259DC74E00328149 /* QuoteSingleView.swift */,
 				781DCCA2259DE31D0092E09D /* PostList.swift */,
+				78D4889925A212550035391E /* LikedQuotesListView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -479,6 +482,7 @@
 				78D4889525A1FD720035391E /* LikeService.swift in Sources */,
 				781396042587E84600D2DE7D /* quoteroApp.swift in Sources */,
 				7884BE2F25A06F3200A37327 /* Quote.swift in Sources */,
+				78D4889A25A212550035391E /* LikedQuotesListView.swift in Sources */,
 				78919CED259CDEBE00EE841B /* QuoteListView.swift in Sources */,
 				781DCCA3259DE31D0092E09D /* PostList.swift in Sources */,
 			);

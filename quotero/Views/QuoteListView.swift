@@ -28,7 +28,6 @@ struct QuoteListView: View {
                     destination: PostList(),
                     label: {
                         VStack(alignment: .leading) {
-                            
                             ZStack {
                                 Image("quotes_background")
                                     .resizable()

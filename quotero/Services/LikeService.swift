@@ -8,20 +8,21 @@
 import Foundation
 import Combine
 import FirebaseAuth
-import Firebase
 import FirebaseFirestore
+import FirebaseFirestoreSwift
 
 
 class LikeService: ObservableObject {
+    
+    @Published var quotes = [Quote]()
   
     private var uid: String
     
-    final var db = FirebaseFirestore.Firestore.firestore()
-    
-    private var cancellables = Set<AnyCancellable>()
+    private var db = FirebaseFirestore.Firestore.firestore()
     
     init() {
         self.uid = Auth.auth().currentUser?.uid ?? "unknown"
+        
 //        self.userId = AuthenticationService().$user.compactMap {
 //            user in
 //            user?.uid
@@ -36,27 +37,44 @@ class LikeService: ObservableObject {
 //          .store(in: &cancellables)
     }
   
-  func likeQuote() {
+    func likeQuote(quote: Quote) {
     print(self.uid)
-    postLike()
+        postLike(quote: quote)
   }
     
-    func unlikeQuote() {
-        deleteLike()
+    func unlikeQuote(quote: Quote) {
+        deleteLike(quote: quote)
     }
-    
-    func likedPosts() {
-        
-    }
-    
-    
   
-  private func postLike() {
-    db.collection("quoteLikes").document()
+    private func postLike(quote: Quote) {
+        db.collection("quoteLikes").document(self.uid).collection("quotes").document(quote.id!)
+        .setData([
+            "body": quote.body,
+            "author": quote.author
+    ])
   }
     
-    private func deleteLike() {
-        
+    private func deleteLike(quote: Quote) {
+        db.collection("quoteLikes").document(self.uid).collection("quotes").document(quote.id!).delete()
+    }
+    
+    func loadData() {
+        db.collection("quoteLikes").document(self.uid)
+        .collection("quotes").addSnapshotListener { documentSnapshot, error in
+            guard let documents = documentSnapshot?.documents else {
+              print("Error fetching document: \(error!)")
+              return
+            }
+            
+            print(documents.compactMap { snapshot in
+                print(snapshot.data())
+            })
+            
+            self.quotes = documents.compactMap { queryDocumentSnapshot in
+                
+                return try? queryDocumentSnapshot.data(as: Quote.self)
+            }
+          }
     }
   
 }

@@ -43,7 +43,7 @@ struct quoteroApp: App {
                     Text("Journey")
                 }
                 NavigationView {
-                    ContentView()
+                    LikedQuotesListView()
                 }
                 .tabItem {
                     Image(systemName: "heart.text.square.fill")

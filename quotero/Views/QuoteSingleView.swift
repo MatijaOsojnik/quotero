@@ -91,7 +91,7 @@ struct QuoteSingleView: View {
                     }
                     if isToggled {
                         Button(action: {
-                            LikeService().unlikeQuote();
+                            LikeService().unlikeQuote(quote: quote);
                             self.isToggled.toggle()
                         }) {
                             Image(systemName: "heart.fill")
@@ -105,7 +105,7 @@ struct QuoteSingleView: View {
                     }
                     else {
                         Button(action: {
-                            LikeService().likeQuote();               self.isToggled.toggle()
+                            LikeService().likeQuote(quote: quote);               self.isToggled.toggle()
                         }) {
                             Image(systemName: "heart")
                                 .resizable()
