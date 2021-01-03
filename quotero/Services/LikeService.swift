@@ -80,7 +80,8 @@ class LikeService: ObservableObject {
         db.collection("quoteLikes").document(self.uid).collection("quotes").document(quote.id!)
         .setData([
             "body": quote.body,
-            "author": quote.author
+            "author": quote.author,
+            "featured": quote.featured
     ])
   }
     

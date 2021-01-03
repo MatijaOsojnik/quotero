@@ -21,8 +21,10 @@ struct QuoteListView: View {
     @Environment(\.colorScheme) var colorScheme
     @ObservedObject var viewModel = QuotesViewModel()
     
+    @State var quoteOfTheDay:Quote?
+    
     var body: some View {
-        ScrollView {
+       ScrollView {
             VStack() {
                 NavigationLink(
                     destination: PostList(),
@@ -49,33 +51,22 @@ struct QuoteListView: View {
                 .clipShape(RoundedRectangle(cornerRadius: 20))
                 .shadow(color:Color(.white).opacity(0.3), radius: 7, x: 0, y: 7)
                 .shadow(color:Color(.white).opacity(0.1), radius: 2, x: 0, y: 2)
-                
+
                 
                 VStack(alignment: .leading) {
+                    Text("quote of the day.")
+                        .bold()
+                        .padding(.all, 10)
+                        .font(.headline)
                     ForEach(viewModel.quotes, id: \.id) {
                         quote in
-                        QuoteCell(quote: quote)
+                        if quote.featured {
+                            QuoteCell(quote: quote)
+                        }
                     }
                 }.onAppear() {
                     self.viewModel.loadData()
-                    
                 }
-//                List(viewModel.quotes) {
-//                    quote in
-//                    VStack {
-//                        Text(quote.body).padding()
-//                        Text(quote.author)
-//                        NavigationLink(
-//                            destination: QuoteSingleView(quote: quote),
-//                            label: {
-//                                Text("View Quote")
-//                            })
-//                    }.cornerRadius(10.0)
-//                }.lineLimit(3)
-//                .navigationBarTitle(Date().dayOfWeek()!.lowercased() + ".")
-//                .onAppear() {
-//                    self.viewModel.loadData()
-//                }
             }
         }.navigationTitle(Date().dayOfWeek()!.lowercased() + ".")
     }
@@ -87,26 +78,79 @@ struct QuoteCell: View {
     
     @Environment(\.colorScheme) var colorScheme
     
+    @State private var showingDetail: Bool = false
+    
     var body: some View {
-        ZStack {
-            RoundedRectangle(cornerRadius: 20).fill(colorScheme == .dark ? Color.white : Color.black)
-                
-            VStack {
-                Text(quote.body).foregroundColor(colorScheme == .dark ? Color.black : Color.white)
-                    .fixedSize(horizontal: false, vertical: true)
-                    .font(.body)
-                    .padding(.all, 10)
-                
-                Text(quote.author)
-                    .foregroundColor(colorScheme == .dark ? Color.black : Color.white).padding()
-                    .font(.caption)
+//        NavigationLink(
+//            destination: QuoteSingleView(quote: quote),
+//            label: {
+//                ZStack {
+//                    RoundedRectangle(cornerRadius: 20).fill(colorScheme == .dark ? Color.white : Color.black)
+//                        
+//                    VStack {
+//                        Text(quote.body).foregroundColor(colorScheme == .dark ? Color.black : Color.white)
+//                            .fixedSize(horizontal: false, vertical: true)
+//                            .font(.body)
+//                            .padding(.all, 10)
+//                        
+//                        Text(quote.author)
+//                            .foregroundColor(colorScheme == .dark ? Color.black : Color.white).padding()
+//                            .font(.caption)
+//                        
+//                    }
+//                    .padding()
+//                    
+//                }
+//                .padding(.all, 10)
+//            }
+//            )
+        Button(action: {
+            showingDetail.toggle()
+        }, label: {
+            ZStack {
+                RoundedRectangle(cornerRadius: 20).fill(colorScheme == .dark ? Color.white : Color.black)
+                    
+                VStack {
+                    Text(quote.body).foregroundColor(colorScheme == .dark ? Color.black : Color.white)
+                        .fixedSize(horizontal: false, vertical: true)
+                        .font(.body)
+                        .padding(.all, 10)
+                    
+                    Text(quote.author)
+                        .foregroundColor(colorScheme == .dark ? Color.black : Color.white).padding()
+                        .font(.caption)
+                    
+                }
+                .padding()
                 
             }
-            .padding()
-            
+            .padding(.all, 10)
+        }).sheet(isPresented: $showingDetail, content: {
+            QuoteSingleView(quote: quote)
+        })
+        
+//        ZStack {
+//            RoundedRectangle(cornerRadius: 20).fill(colorScheme == .dark ? Color.white : Color.black)
+//
+//            VStack {
+//                Text(quote.body).foregroundColor(colorScheme == .dark ? Color.black : Color.white)
+//                    .fixedSize(horizontal: false, vertical: true)
+//                    .font(.body)
+//                    .padding(.all, 10)
+//
+//                Text(quote.author)
+//                    .foregroundColor(colorScheme == .dark ? Color.black : Color.white).padding()
+//                    .font(.caption)
+//
+//            }
+//            .padding()
+//
+//        }
+//        .padding(.all, 10)
+//
+//
         }
-        .padding(.all, 10)
-    }
+    
 }
 
 

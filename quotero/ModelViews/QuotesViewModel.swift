@@ -15,6 +15,8 @@ class QuotesViewModel: ObservableObject {
     
     @Published var quotes = [Quote]()
     
+    @Published var quoteDay:Quote!
+    
     func loadData() {
         db.collection("quotes").addSnapshotListener { (querySnapshot, error) in
             guard let documents = querySnapshot?.documents else {
@@ -23,9 +25,10 @@ class QuotesViewModel: ObservableObject {
             }
             
             self.quotes = documents.compactMap { queryDocumentSnapshot -> Quote? in
-                
                 return try? queryDocumentSnapshot.data(as: Quote.self)
             }
+            
+            print(self.quotes)
 //                    let data = queryDocumentSnapshot.data()
 //
 //                    let body = data["body"] as? String ?? ""
@@ -39,4 +42,9 @@ class QuotesViewModel: ObservableObject {
 //            }
       }
     }
+//    func quoteOfTheDay() {
+//        let daysSince1970 = NSDate().timeIntervalSince1970 / 60 / 60 / 24
+//        let index = Int(daysSince1970) % self.quotes.count
+//        self.quoteDay = self.quotes[index]
+//    }
 }

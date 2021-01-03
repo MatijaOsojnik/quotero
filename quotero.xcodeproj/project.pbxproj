@@ -13,18 +13,30 @@
 		7813960B2587E84700D2DE7D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7813960A2587E84700D2DE7D /* Preview Assets.xcassets */; };
 		781396162587E84700D2DE7D /* quoteroTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781396152587E84700D2DE7D /* quoteroTests.swift */; };
 		781396212587E84700D2DE7D /* quoteroUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781396202587E84700D2DE7D /* quoteroUITests.swift */; };
-		781DCCA3259DE31D0092E09D /* PostList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781DCCA2259DE31D0092E09D /* PostList.swift */; };
 		783C33EA259DC74E00328149 /* QuoteSingleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783C33E9259DC74E00328149 /* QuoteSingleView.swift */; };
 		7884BE2F25A06F3200A37327 /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7884BE2E25A06F3200A37327 /* Quote.swift */; };
 		788B08472598F00B00765D63 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 788B08462598F00B00765D63 /* GoogleService-Info.plist */; };
 		78919CED259CDEBE00EE841B /* QuoteListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78919CEC259CDEBE00EE841B /* QuoteListView.swift */; };
 		78BA2D5F25A0562600A861A9 /* QuotesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BA2D5E25A0562600A861A9 /* QuotesViewModel.swift */; };
-		78D4888725A1EAA10035391E /* Neumorphic in Frameworks */ = {isa = PBXBuildFile; productRef = 78D4888625A1EAA10035391E /* Neumorphic */; };
+		78D4888725A1EAA10035391E /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 78D4888625A1EAA10035391E /* SwiftPackageProductDependency */; };
 		78D4888D25A1F4A20035391E /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D4888C25A1F4A20035391E /* AuthenticationService.swift */; };
 		78D4889525A1FD720035391E /* LikeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D4889425A1FD720035391E /* LikeService.swift */; };
 		78D4889A25A212550035391E /* LikedQuotesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D4889925A212550035391E /* LikedQuotesListView.swift */; };
+		78D488A225A2466B0035391E /* PostList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D488A125A2466B0035391E /* PostList.swift */; };
+		78D488AC25A24F6A0035391E /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78D488AB25A24F6A0035391E /* WidgetKit.framework */; };
+		78D488AE25A24F6A0035391E /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78D488AD25A24F6A0035391E /* SwiftUI.framework */; };
+		78D488B125A24F6A0035391E /* QuoteWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D488B025A24F6A0035391E /* QuoteWidget.swift */; };
+		78D488B425A24F6B0035391E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78D488B325A24F6B0035391E /* Assets.xcassets */; };
+		78D488B625A24F6B0035391E /* QuoteWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 78D488B225A24F6A0035391E /* QuoteWidget.intentdefinition */; };
+		78D488B725A24F6B0035391E /* QuoteWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 78D488B225A24F6A0035391E /* QuoteWidget.intentdefinition */; };
+		78D488BA25A24F6B0035391E /* QuoteWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 78D488AA25A24F6A0035391E /* QuoteWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		78D488C725A253B10035391E /* QuotesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BA2D5E25A0562600A861A9 /* QuotesViewModel.swift */; };
+		78D488CC25A253B90035391E /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7884BE2E25A06F3200A37327 /* Quote.swift */; };
+		78D488D225A253FB0035391E /* QuoteWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D488D125A253FB0035391E /* QuoteWidgetView.swift */; };
+		78D488D725A256270035391E /* QuoteWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D488D125A253FB0035391E /* QuoteWidgetView.swift */; };
 		8ADC8AAB845DC861DCEF6BD1 /* Pods_quoteroTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEC0BC9CDFA7EBEC80CEEF2B /* Pods_quoteroTests.framework */; };
 		8EF117206D7DCB75AB63D079 /* Pods_quotero_quoteroUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC8982065EBEB1193E852B40 /* Pods_quotero_quoteroUITests.framework */; };
+		D7D746224C9925EA35B46E6B /* Pods_quotero.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DEA7DF0119E695E1D3C512E /* Pods_quotero.framework */; };
 		F6DAF5709FD342F5EF6D94BD /* Pods_quotero.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DEA7DF0119E695E1D3C512E /* Pods_quotero.framework */; };
 /* End PBXBuildFile section */
 
@@ -43,7 +55,28 @@
 			remoteGlobalIDString = 781395FF2587E84500D2DE7D;
 			remoteInfo = quotero;
 		};
+		78D488B825A24F6B0035391E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 781395F82587E84500D2DE7D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 78D488A925A24F6A0035391E;
+			remoteInfo = QuoteWidgetExtension;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		78D488BE25A24F6B0035391E /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				78D488BA25A24F6B0035391E /* QuoteWidgetExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		1DEA7DF0119E695E1D3C512E /* Pods_quotero.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_quotero.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -60,7 +93,6 @@
 		7813961C2587E84700D2DE7D /* quoteroUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = quoteroUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		781396202587E84700D2DE7D /* quoteroUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = quoteroUITests.swift; sourceTree = "<group>"; };
 		781396222587E84700D2DE7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		781DCCA2259DE31D0092E09D /* PostList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostList.swift; sourceTree = "<group>"; };
 		783C33E9259DC74E00328149 /* QuoteSingleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteSingleView.swift; sourceTree = "<group>"; };
 		7884BE2E25A06F3200A37327 /* Quote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Quote.swift; path = "../../../../../Library/Mobile Documents/com~apple~CloudDocs/.Trash/Quote.swift"; sourceTree = "<group>"; };
 		788B08462598F00B00765D63 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -69,6 +101,15 @@
 		78D4888C25A1F4A20035391E /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
 		78D4889425A1FD720035391E /* LikeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeService.swift; sourceTree = "<group>"; };
 		78D4889925A212550035391E /* LikedQuotesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikedQuotesListView.swift; sourceTree = "<group>"; };
+		78D488A125A2466B0035391E /* PostList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostList.swift; path = "../../../../../Library/Mobile Documents/com~apple~CloudDocs/.Trash/PostList.swift"; sourceTree = "<group>"; };
+		78D488AA25A24F6A0035391E /* QuoteWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = QuoteWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		78D488AB25A24F6A0035391E /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		78D488AD25A24F6A0035391E /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		78D488B025A24F6A0035391E /* QuoteWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteWidget.swift; sourceTree = "<group>"; };
+		78D488B225A24F6A0035391E /* QuoteWidget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = QuoteWidget.intentdefinition; sourceTree = "<group>"; };
+		78D488B325A24F6B0035391E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		78D488B525A24F6B0035391E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		78D488D125A253FB0035391E /* QuoteWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteWidgetView.swift; sourceTree = "<group>"; };
 		8A507290C42CA48127376E0C /* Pods-quotero-quoteroUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-quotero-quoteroUITests.release.xcconfig"; path = "Target Support Files/Pods-quotero-quoteroUITests/Pods-quotero-quoteroUITests.release.xcconfig"; sourceTree = "<group>"; };
 		9DA9BE2355EA3F6314D118C0 /* Pods-quotero-quoteroUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-quotero-quoteroUITests.debug.xcconfig"; path = "Target Support Files/Pods-quotero-quoteroUITests/Pods-quotero-quoteroUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A169F672347F9EFD31ECAFD8 /* Pods-quotero.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-quotero.release.xcconfig"; path = "Target Support Files/Pods-quotero/Pods-quotero.release.xcconfig"; sourceTree = "<group>"; };
@@ -83,8 +124,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				78D4888725A1EAA10035391E /* Neumorphic in Frameworks */,
+				78D4888725A1EAA10035391E /* BuildFile in Frameworks */,
 				F6DAF5709FD342F5EF6D94BD /* Pods_quotero.framework in Frameworks */,
+				D7D746224C9925EA35B46E6B /* Pods_quotero.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,6 +143,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				8EF117206D7DCB75AB63D079 /* Pods_quotero_quoteroUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		78D488A725A24F6A0035391E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78D488AE25A24F6A0035391E /* SwiftUI.framework in Frameworks */,
+				78D488AC25A24F6A0035391E /* WidgetKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -126,6 +177,7 @@
 				781396022587E84500D2DE7D /* quotero */,
 				781396142587E84700D2DE7D /* quoteroTests */,
 				7813961F2587E84700D2DE7D /* quoteroUITests */,
+				78D488AF25A24F6A0035391E /* QuoteWidget */,
 				781396012587E84500D2DE7D /* Products */,
 				10994E9EC0897646B117583D /* Pods */,
 				EF11A8CFA8B711E7574B8582 /* Frameworks */,
@@ -138,6 +190,7 @@
 				781396002587E84500D2DE7D /* quotero.app */,
 				781396112587E84700D2DE7D /* quoteroTests.xctest */,
 				7813961C2587E84700D2DE7D /* quoteroUITests.xctest */,
+				78D488AA25A24F6A0035391E /* QuoteWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -196,9 +249,9 @@
 		78919CEB259CDCF400EE841B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				78D488A125A2466B0035391E /* PostList.swift */,
 				78919CEC259CDEBE00EE841B /* QuoteListView.swift */,
 				783C33E9259DC74E00328149 /* QuoteSingleView.swift */,
-				781DCCA2259DE31D0092E09D /* PostList.swift */,
 				78D4889925A212550035391E /* LikedQuotesListView.swift */,
 			);
 			path = Views;
@@ -221,12 +274,26 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		78D488AF25A24F6A0035391E /* QuoteWidget */ = {
+			isa = PBXGroup;
+			children = (
+				78D488B025A24F6A0035391E /* QuoteWidget.swift */,
+				78D488B225A24F6A0035391E /* QuoteWidget.intentdefinition */,
+				78D488B325A24F6B0035391E /* Assets.xcassets */,
+				78D488B525A24F6B0035391E /* Info.plist */,
+				78D488D125A253FB0035391E /* QuoteWidgetView.swift */,
+			);
+			path = QuoteWidget;
+			sourceTree = "<group>";
+		};
 		EF11A8CFA8B711E7574B8582 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				1DEA7DF0119E695E1D3C512E /* Pods_quotero.framework */,
 				DC8982065EBEB1193E852B40 /* Pods_quotero_quoteroUITests.framework */,
 				AEC0BC9CDFA7EBEC80CEEF2B /* Pods_quoteroTests.framework */,
+				78D488AB25A24F6A0035391E /* WidgetKit.framework */,
+				78D488AD25A24F6A0035391E /* SwiftUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -243,14 +310,17 @@
 				781395FD2587E84500D2DE7D /* Frameworks */,
 				781395FE2587E84500D2DE7D /* Resources */,
 				32D3B61EEE067B2E38D2B6C2 /* [CP] Embed Pods Frameworks */,
+				78D488BE25A24F6B0035391E /* Embed App Extensions */,
+				0B0BA2529E67B9565B58DCC5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				78D488B925A24F6B0035391E /* PBXTargetDependency */,
 			);
 			name = quotero;
 			packageProductDependencies = (
-				78D4888625A1EAA10035391E /* Neumorphic */,
+				78D4888625A1EAA10035391E /* SwiftPackageProductDependency */,
 			);
 			productName = quotero;
 			productReference = 781396002587E84500D2DE7D /* quotero.app */;
@@ -284,6 +354,7 @@
 				781396192587E84700D2DE7D /* Frameworks */,
 				7813961A2587E84700D2DE7D /* Resources */,
 				FD958974BD52EFB04A8B7C34 /* [CP] Embed Pods Frameworks */,
+				CD19C37A1D37A2C5C1CBC8F5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -295,13 +366,30 @@
 			productReference = 7813961C2587E84700D2DE7D /* quoteroUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		78D488A925A24F6A0035391E /* QuoteWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 78D488BB25A24F6B0035391E /* Build configuration list for PBXNativeTarget "QuoteWidgetExtension" */;
+			buildPhases = (
+				78D488A625A24F6A0035391E /* Sources */,
+				78D488A725A24F6A0035391E /* Frameworks */,
+				78D488A825A24F6A0035391E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = QuoteWidgetExtension;
+			productName = QuoteWidgetExtension;
+			productReference = 78D488AA25A24F6A0035391E /* QuoteWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		781395F82587E84500D2DE7D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1220;
+				LastSwiftUpdateCheck = 1230;
 				LastUpgradeCheck = 1220;
 				TargetAttributes = {
 					781395FF2587E84500D2DE7D = {
@@ -315,6 +403,9 @@
 						CreatedOnToolsVersion = 12.2;
 						TestTargetID = 781395FF2587E84500D2DE7D;
 					};
+					78D488A925A24F6A0035391E = {
+						CreatedOnToolsVersion = 12.3;
+					};
 				};
 			};
 			buildConfigurationList = 781395FB2587E84500D2DE7D /* Build configuration list for PBXProject "quotero" */;
@@ -327,7 +418,7 @@
 			);
 			mainGroup = 781395F72587E84500D2DE7D;
 			packageReferences = (
-				78D4888525A1EAA10035391E /* XCRemoteSwiftPackageReference "neumorphic" */,
+				78D4888525A1EAA10035391E /* RemoteSwiftPackageReference */,
 			);
 			productRefGroup = 781396012587E84500D2DE7D /* Products */;
 			projectDirPath = "";
@@ -336,6 +427,7 @@
 				781395FF2587E84500D2DE7D /* quotero */,
 				781396102587E84700D2DE7D /* quoteroTests */,
 				7813961B2587E84700D2DE7D /* quoteroUITests */,
+				78D488A925A24F6A0035391E /* QuoteWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -365,9 +457,34 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		78D488A825A24F6A0035391E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78D488B425A24F6B0035391E /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0B0BA2529E67B9565B58DCC5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-quotero/Pods-quotero-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-quotero/Pods-quotero-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-quotero/Pods-quotero-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		32D3B61EEE067B2E38D2B6C2 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -451,6 +568,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		CD19C37A1D37A2C5C1CBC8F5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-quotero-quoteroUITests/Pods-quotero-quoteroUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-quotero-quoteroUITests/Pods-quotero-quoteroUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-quotero-quoteroUITests/Pods-quotero-quoteroUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		FD958974BD52EFB04A8B7C34 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -476,15 +610,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				781396062587E84600D2DE7D /* ContentView.swift in Sources */,
+				78D488A225A2466B0035391E /* PostList.swift in Sources */,
 				78BA2D5F25A0562600A861A9 /* QuotesViewModel.swift in Sources */,
+				78D488B725A24F6B0035391E /* QuoteWidget.intentdefinition in Sources */,
 				783C33EA259DC74E00328149 /* QuoteSingleView.swift in Sources */,
+				78D488D225A253FB0035391E /* QuoteWidgetView.swift in Sources */,
 				78D4888D25A1F4A20035391E /* AuthenticationService.swift in Sources */,
 				78D4889525A1FD720035391E /* LikeService.swift in Sources */,
 				781396042587E84600D2DE7D /* quoteroApp.swift in Sources */,
 				7884BE2F25A06F3200A37327 /* Quote.swift in Sources */,
 				78D4889A25A212550035391E /* LikedQuotesListView.swift in Sources */,
 				78919CED259CDEBE00EE841B /* QuoteListView.swift in Sources */,
-				781DCCA3259DE31D0092E09D /* PostList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -504,6 +640,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		78D488A625A24F6A0035391E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78D488CC25A253B90035391E /* Quote.swift in Sources */,
+				78D488B125A24F6A0035391E /* QuoteWidget.swift in Sources */,
+				78D488C725A253B10035391E /* QuotesViewModel.swift in Sources */,
+				78D488B625A24F6B0035391E /* QuoteWidget.intentdefinition in Sources */,
+				78D488D725A256270035391E /* QuoteWidgetView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -516,6 +664,11 @@
 			isa = PBXTargetDependency;
 			target = 781395FF2587E84500D2DE7D /* quotero */;
 			targetProxy = 7813961D2587E84700D2DE7D /* PBXContainerItemProxy */;
+		};
+		78D488B925A24F6B0035391E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 78D488A925A24F6A0035391E /* QuoteWidgetExtension */;
+			targetProxy = 78D488B825A24F6B0035391E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -640,6 +793,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 71377FFCC9502286889E4AC8 /* Pods-quotero.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -663,6 +817,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A169F672347F9EFD31ECAFD8 /* Pods-quotero.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -772,6 +927,50 @@
 			};
 			name = Release;
 		};
+		78D488BC25A24F6B0035391E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 39TL4UWU4E;
+				INFOPLIST_FILE = QuoteWidget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.matijaosojnik.quotero;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		78D488BD25A24F6B0035391E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 39TL4UWU4E;
+				INFOPLIST_FILE = QuoteWidget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.matijaosojnik.quotero.QuoteWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -811,10 +1010,19 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		78D488BB25A24F6B0035391E /* Build configuration list for PBXNativeTarget "QuoteWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				78D488BC25A24F6B0035391E /* Debug */,
+				78D488BD25A24F6B0035391E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		78D4888525A1EAA10035391E /* XCRemoteSwiftPackageReference "neumorphic" */ = {
+		78D4888525A1EAA10035391E /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/costachung/neumorphic/";
 			requirement = {
@@ -825,9 +1033,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		78D4888625A1EAA10035391E /* Neumorphic */ = {
+		78D4888625A1EAA10035391E /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 78D4888525A1EAA10035391E /* XCRemoteSwiftPackageReference "neumorphic" */;
+			package = 78D4888525A1EAA10035391E /* RemoteSwiftPackageReference */;
 			productName = Neumorphic;
 		};
 /* End XCSwiftPackageProductDependency section */
