@@ -22,12 +22,6 @@ class LikeService: ObservableObject {
     
     init() {
         self.uid = Auth.auth().currentUser?.uid ?? "unknown"
-        
-//        self.userId = AuthenticationService().$user.compactMap {
-//            user in
-//            user?.uid
-//        }.assign(to: \.userId, on: self)
-//        .store(in: &cancellables)
 //
 //        AuthenticationService().$user // (6)
 //          .receive(on: DispatchQueue.main) // (7)
@@ -45,6 +39,42 @@ class LikeService: ObservableObject {
     func unlikeQuote(quote: Quote) {
         deleteLike(quote: quote)
     }
+    
+    func loadData() {
+        db.collection("quoteLikes").document(self.uid)
+        .collection("quotes").addSnapshotListener { documentSnapshot, error in
+            guard let documents = documentSnapshot?.documents else {
+              print("Error fetching document: \(error!)")
+              return
+            }
+            
+            self.quotes = documents.compactMap { queryDocumentSnapshot in
+                
+                return try? queryDocumentSnapshot.data(as: Quote.self)
+            }
+          }
+    }
+    
+    func isliked (quote: Quote, completion: @escaping (Bool) -> Void){
+        let quoteId = db.collection("quotes").document((quote.id as String?)!).documentID
+        db.collection("quoteLikes").document(self.uid)
+        .collection("quotes")
+            .addSnapshotListener { documentSnapshot, error in
+            guard let documents = documentSnapshot?.documents else {
+              print("Error fetching document: \(error!)")
+              return
+            }
+                for i in 0 ..< documents.count {
+                    if documents[i].documentID == quoteId {
+                            completion(true)
+                        return
+                        }
+                }
+            completion(false)
+            }
+        }
+    
+    
   
     private func postLike(quote: Quote) {
         db.collection("quoteLikes").document(self.uid).collection("quotes").document(quote.id!)
@@ -56,25 +86,6 @@ class LikeService: ObservableObject {
     
     private func deleteLike(quote: Quote) {
         db.collection("quoteLikes").document(self.uid).collection("quotes").document(quote.id!).delete()
-    }
-    
-    func loadData() {
-        db.collection("quoteLikes").document(self.uid)
-        .collection("quotes").addSnapshotListener { documentSnapshot, error in
-            guard let documents = documentSnapshot?.documents else {
-              print("Error fetching document: \(error!)")
-              return
-            }
-            
-            print(documents.compactMap { snapshot in
-                print(snapshot.data())
-            })
-            
-            self.quotes = documents.compactMap { queryDocumentSnapshot in
-                
-                return try? queryDocumentSnapshot.data(as: Quote.self)
-            }
-          }
     }
   
 }

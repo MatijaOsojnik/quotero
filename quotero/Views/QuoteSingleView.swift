@@ -42,14 +42,17 @@ struct QuoteSingleView: View {
     
     @State var quote: Quote
     
+    @State var toggled = false
+    
     @ObservedObject var viewModel = QuotesViewModel()
+    
+    @ObservedObject var likeModel = LikeService()
     
 //    var quotes: [Quote] = testDataQuotes
     
     @Environment(\.colorScheme) var colorScheme
     
-    @State private var isToggled = false
-    
+    @State var isToggled = false
     var btnBack : some View { Button(action: {
             self.presentationMode.wrappedValue.dismiss()
             }) {
@@ -105,7 +108,7 @@ struct QuoteSingleView: View {
                     }
                     else {
                         Button(action: {
-                            LikeService().likeQuote(quote: quote);               self.isToggled.toggle()
+                            LikeService().likeQuote(quote: quote);
                         }) {
                             Image(systemName: "heart")
                                 .resizable()
@@ -120,9 +123,19 @@ struct QuoteSingleView: View {
                 }
                 
             }
+            .onAppear() {
+                print(self.likeModel.isliked(quote: quote, completion: { (liked) in
+                    if liked {
+                        self.isToggled.toggle()
+                    } else {
+                        print("This quote is not liked")
+                    }
+                }))
+            }
             .edgesIgnoringSafeArea(.horizontal)
             .navigationBarBackButtonHidden(true)
             .navigationBarItems(leading: btnBack)
+            
         
         
         //Text(self.quotes[0].body)
