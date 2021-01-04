@@ -6,7 +6,9 @@
 //
 
 import SwiftUI
-import Neumorphic
+import AVKit
+
+
 
 extension Date {
     func dayOfWeek() -> String? {
@@ -17,14 +19,36 @@ extension Date {
     }
 }
 
-struct QuoteListView: View {
+//class ViewController: UIViewController, YTPlayerViewDelegate {
+//    @IBOutlet var playerView: YTPlayerView!
+//
+//    override func viewDidLoad(){
+//        super.viewDidLoad()
+//        playerView?.delegate = self
+//        playerView?.load(withVideoId: "g-jwWYX7Jlo")
+//    }
+//
+//    required init?(coder: NSCoder) {
+//        fatalError("init(coder:) has not been implemented")
+//    }
+//
+//    func playerViewDidBecomeReady(_ playerView: YTPlayerView) {
+//        playerView.playVideo()
+//    }
+//}
+
+struct QuoteListView: View{
+    
     @Environment(\.colorScheme) var colorScheme
     @ObservedObject var viewModel = QuotesViewModel()
     
     @State var quoteOfTheDay:Quote?
     
+    
+    
     var body: some View {
        ScrollView {
+            
             VStack() {
                 NavigationLink(
                     destination: PostList(),
@@ -69,7 +93,18 @@ struct QuoteListView: View {
                 .onAppear() {
                     self.viewModel.loadData()
                 }
+//                VStack(alignment: .leading) {
+//                    Text("be inspired.")
+//                        .bold()
+//                        .font(.headline)
+//                    VideoPlayer(player: AVPlayer(url: URL(string: "https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4")!))
+//                        .frame(minWidth: 0, maxWidth: .infinity, minHeight: 300, maxHeight: 500)
+//                        .padding()
+//                }
+                
+                
             }
+        
         }.navigationTitle(Date().dayOfWeek()!.lowercased() + ".")
     }
 }
